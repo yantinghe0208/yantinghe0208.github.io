@@ -14,19 +14,8 @@ test("builds the complete academic homepage", async () => {
   assert.match(html, /heyanting@cuhk\.edu\.cn/i);
   assert.match(html, /Portrait of Yanting He/i);
   assert.match(html, /https:\/\/yantinghe0208\.github\.io\/profile\.jpg/i);
-  assert.match(html, /href="\/cv\/"/i);
+  assert.match(html, /href="\/Yanting-He-CV\.pdf"/i);
   assert.doesNotMatch(html, /Starter Project|codex-preview|SkeletonPreview/i);
-});
-
-test("builds a dedicated CV page linked to the current PDF", async () => {
-  const html = await readFile(new URL("cv/index.html", outputRoot), "utf8");
-
-  assert.match(html, /<title>Curriculum Vitae \| Yanting He<\/title>/i);
-  assert.match(html, /Academic CV/i);
-  assert.match(html, /Yanting-He-CV\.pdf#view=FitH/i);
-  assert.match(html, /Download PDF/i);
-  assert.match(html, /https:\/\/yantinghe0208\.github\.io\/profile\.jpg/i);
-  assert.doesNotMatch(html, /https:\/\/yantinghe0208\.github\.io\/og\.png/i);
 });
 
 test("ships the public CV and profile photo", async () => {
