@@ -23,7 +23,7 @@ export default function Home() {
         <nav aria-label="Primary navigation">
           <a href="#research">Research</a>
           <a href="#teaching">Teaching</a>
-          <a href="/Yanting-He-CV.pdf">CV</a>
+          <a href="/cv/">CV</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -46,8 +46,8 @@ export default function Home() {
             <span>Quantitative Marketing</span>
           </div>
           <div className="hero-actions">
-            <a className="button button-primary" href="/Yanting-He-CV.pdf">
-              Download CV
+            <a className="button button-primary" href="/cv/">
+              View CV
             </a>
             <a className="button button-secondary" href="mailto:heyanting@cuhk.edu.cn">
               Email me
@@ -91,7 +91,7 @@ export default function Home() {
         <div className="section-content">
           <div className="section-heading section-heading-compact">
             <h2 id="work-title">Publications and selected working papers.</h2>
-            <a className="simple-link" href="/Yanting-He-CV.pdf">
+            <a className="simple-link" href="/cv/">
               Full curriculum vitae <span aria-hidden="true">→</span>
             </a>
           </div>
