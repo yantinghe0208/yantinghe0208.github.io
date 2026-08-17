@@ -3,31 +3,31 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://yantinghe0208.github.io"),
-  title: "Yanting He · Marketing Scholar",
+  title: "Yanting He | Assistant Professor of Marketing",
   description:
     "Yanting He is an Assistant Professor of Marketing at The Chinese University of Hong Kong, Shenzhen.",
   openGraph: {
-    title: "Yanting He · Marketing Scholar",
+    title: "Yanting He | Assistant Professor of Marketing",
     description:
       "Research on the creator economy, digital platforms, and quantitative marketing.",
     url: "https://yantinghe0208.github.io",
     siteName: "Yanting He",
     images: [
       {
-        url: "/og.png",
-        width: 1792,
-        height: 922,
-        alt: "Yanting He — Marketing, Digital Platforms, Creator Economy",
+        url: "/profile.jpg",
+        width: 1800,
+        height: 1201,
+        alt: "Portrait of Yanting He",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yanting He · Marketing Scholar",
+    title: "Yanting He | Assistant Professor of Marketing",
     description:
       "Research on the creator economy, digital platforms, and quantitative marketing.",
-    images: ["/og.png"],
+    images: ["/profile.jpg"],
   },
 };
 
