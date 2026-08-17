@@ -1,15 +1,53 @@
-const researchAreas = [
+const research = [
   {
-    title: "Creator Economy",
-    copy: "How creators, audiences, and platforms shape one another through new forms of communication and exchange.",
+    number: "01",
+    status: "Publication · Marketing Science · 2025",
+    title:
+      "Frontiers: How Much Influencer Marketing Is Undisclosed? Evidence from Twitter.",
+    authors: (
+      <>
+        Daniel Ershov, <strong>Yanting He</strong>, and Stephan Seiler
+      </>
+    ),
+    note: "Authors listed alphabetically · Marketing Science, 44(3), 505–515.",
+    href: "https://doi.org/10.1287/mksc.2024.0838",
+    linkLabel: "Publication",
   },
   {
-    title: "Digital Platforms",
-    copy: "How platform design changes disclosure, participation, and market outcomes in digital environments.",
+    number: "02",
+    status: "Selected working paper · Job market paper",
+    title: "Private Messaging in the Creator Economy.",
+    authors: (
+      <>
+        <strong>Yanting He</strong> and Andreas Lanz
+      </>
+    ),
+    note: "",
+    href: "https://proceedings.emac-online.org/pdfs/A2025-126356.pdf",
+    linkLabel: "Working paper",
+  },
+];
+
+const teaching = [
+  {
+    years: "2026–Present",
+    institution: "The Chinese University of Hong Kong, Shenzhen",
+    courses: ["Marketing Analytics · Module Leader", "PhD Seminar · Module Leader"],
   },
   {
-    title: "Quantitative Marketing",
-    copy: "Causal inference and machine learning applied to substantive questions in marketing and the digital economy.",
+    years: "2023–2025",
+    institution: "Imperial College London",
+    courses: [
+      "Advanced Marketing Analytics · MSc Module Tutor",
+      "Marketing Analytics · MSc Module Tutor",
+      "Machine Learning Applications in Marketing · MSc Module Tutor",
+    ],
+    award: "Teaching Excellence Award Recipient · 2024–25",
+  },
+  {
+    years: "2023–2024",
+    institution: "ESCP Business School, London",
+    courses: ["Data-Driven Marketing · MSc Visiting Lecturer"],
   },
 ];
 
@@ -29,32 +67,6 @@ export default function Home() {
       </header>
 
       <section className="hero" aria-labelledby="hero-title">
-        <div className="hero-copy">
-          <p className="kicker">Assistant Professor of Marketing</p>
-          <h1 id="hero-title">Yanting He</h1>
-          <p className="affiliation">
-            School of Management and Economics<br />
-            The Chinese University of Hong Kong, Shenzhen
-          </p>
-          <p className="intro">
-            I study how people create, communicate, and transact on digital
-            platforms—and what those interactions mean for firms and society.
-          </p>
-          <div className="research-interests" aria-label="Research interests">
-            <span>Creator Economy</span>
-            <span>Digital Platforms</span>
-            <span>Quantitative Marketing</span>
-          </div>
-          <div className="hero-actions">
-            <a className="button button-primary" href="/Yanting-He-CV.pdf">
-              Download CV
-            </a>
-            <a className="button button-secondary" href="mailto:heyanting@cuhk.edu.cn">
-              Email me
-            </a>
-          </div>
-        </div>
-
         <figure className="portrait-wrap">
           <img
             src="/profile.jpg"
@@ -63,145 +75,126 @@ export default function Home() {
             height="1201"
           />
         </figure>
-      </section>
 
-      <section className="research-overview section" id="research">
-        <div className="section-label">Research</div>
-        <div className="section-content">
-          <div className="section-heading">
-            <h2>Research on emerging digital markets.</h2>
-            <p>
-              My work connects platform behavior with rigorous empirical methods
-              to understand communication, disclosure, and market outcomes.
-            </p>
-          </div>
-          <div className="research-grid">
-            {researchAreas.map((area) => (
-              <article key={area.title}>
-                <h3>{area.title}</h3>
-                <p>{area.copy}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="work section" aria-labelledby="work-title">
-        <div className="section-label">Selected work</div>
-        <div className="section-content">
-          <div className="section-heading section-heading-compact">
-            <h2 id="work-title">Publications and selected working papers.</h2>
-            <a className="simple-link" href="/Yanting-He-CV.pdf">
-              Full curriculum vitae <span aria-hidden="true">→</span>
-            </a>
-          </div>
-
-          <div className="paper-list">
-            <article className="paper">
-              <p className="paper-type">Publication · Marketing Science · 2025</p>
-              <h3>
-                Frontiers: How Much Influencer Marketing Is Undisclosed?
-                Evidence from Twitter.
-              </h3>
-              <p className="authors">
-                Daniel Ershov, <strong>Yanting He</strong>, and Stephan Seiler
-                <span>Authors listed alphabetically</span>
-              </p>
-              <p>Marketing Science, 44(3), 505–515.</p>
-              <a
-                className="simple-link"
-                href="https://doi.org/10.1287/mksc.2024.0838"
-                target="_blank"
-                rel="noreferrer"
-              >
-                View publication <span aria-hidden="true">↗</span>
-              </a>
-            </article>
-
-            <article className="paper">
-              <p className="paper-type">Selected working paper · Job market paper</p>
-              <h3>Private Messaging in the Creator Economy.</h3>
-              <p className="authors">
-                <strong>Yanting He</strong> and Andreas Lanz
-              </p>
-              <a
-                className="simple-link"
-                href="https://proceedings.emac-online.org/pdfs/A2025-126356.pdf"
-                target="_blank"
-                rel="noreferrer"
-              >
-                View working paper <span aria-hidden="true">↗</span>
-              </a>
-            </article>
+        <div className="hero-copy">
+          <p className="eyebrow">Assistant Professor of Marketing</p>
+          <h1 id="hero-title">Yanting He</h1>
+          <p className="affiliation">
+            School of Management and Economics<br />
+            The Chinese University of Hong Kong, Shenzhen
+          </p>
+          <p className="intro">
+            I study the creator economy and digital platforms, with a focus on
+            how platform design shapes disclosure, participation, and market
+            outcomes. My work combines substantive marketing questions with
+            causal inference and machine learning.
+          </p>
+          <p className="interests">
+            <span>Research interests</span>
+            Creator Economy · Digital Platforms · Quantitative Marketing
+          </p>
+          <div className="hero-links" aria-label="Profile links">
+            <a href="#research">Research <span aria-hidden="true">↓</span></a>
+            <a href="/Yanting-He-CV.pdf">Curriculum vitae <span aria-hidden="true">↗</span></a>
+            <a href="mailto:heyanting@cuhk.edu.cn">Email <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
 
-      <section className="teaching section" id="teaching" aria-labelledby="teaching-title">
-        <div className="section-label">Teaching</div>
-        <div className="section-content">
-          <div className="section-heading">
-            <h2 id="teaching-title">Teaching experience.</h2>
-            <p>
-              I teach quantitative marketing at undergraduate, MSc, and doctoral
-              levels, translating analytical tools into managerial insight.
-            </p>
-          </div>
-
-          <div className="teaching-list">
-            <article>
-              <p className="year">2026–Present</p>
-              <div>
-                <h3>The Chinese University of Hong Kong, Shenzhen</h3>
-                <p>Marketing Analytics · Module Leader</p>
-                <p>PhD Seminar · Module Leader</p>
-              </div>
-            </article>
-            <article>
-              <p className="year">2023–2025</p>
-              <div>
-                <h3>Imperial College London</h3>
-                <p>Advanced Marketing Analytics · MSc Module Tutor</p>
-                <p>Marketing Analytics · MSc Module Tutor</p>
-                <p>Machine Learning Applications in Marketing · MSc Module Tutor</p>
-                <p className="award">Teaching Excellence Award Recipient · 2024–25</p>
-              </div>
-            </article>
-            <article>
-              <p className="year">2023–2024</p>
-              <div>
-                <h3>ESCP Business School, London</h3>
-                <p>Data-Driven Marketing · MSc Visiting Lecturer</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="contact section" id="contact" aria-labelledby="contact-title">
-        <div className="section-label">Contact</div>
-        <div className="section-content contact-content">
+      <section className="section" id="research" aria-labelledby="research-title">
+        <div className="section-intro">
+          <p className="section-number">01</p>
           <div>
-            <h2 id="contact-title">Let’s connect.</h2>
-            <p>I welcome conversations about research, teaching, and collaboration.</p>
+            <p className="eyebrow">Research</p>
+            <h2 id="research-title">Selected research</h2>
           </div>
-          <div className="contact-links">
-            <a href="mailto:heyanting@cuhk.edu.cn">heyanting@cuhk.edu.cn</a>
-            <a href="mailto:yanting.he.academic@gmail.com">yanting.he.academic@gmail.com</a>
-            <a
-              href="https://uk.linkedin.com/in/yanting-he-imperial"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn ↗
-            </a>
+          <p className="section-note">
+            My research examines communication and economic behavior in
+            emerging digital markets.
+          </p>
+        </div>
+
+        <div className="paper-list">
+          {research.map((paper) => (
+            <article className="paper" key={paper.number}>
+              <p className="item-number">{paper.number}</p>
+              <div className="paper-body">
+                <p className="paper-status">{paper.status}</p>
+                <h3>{paper.title}</h3>
+                <p className="authors">{paper.authors}</p>
+                {paper.note ? <p className="paper-note">{paper.note}</p> : null}
+              </div>
+              <a
+                className="text-link"
+                href={paper.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {paper.linkLabel} <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+          ))}
+        </div>
+
+        <a className="all-work-link" href="/Yanting-He-CV.pdf">
+          View complete research record in my CV <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+
+      <section className="section teaching" id="teaching" aria-labelledby="teaching-title">
+        <div className="section-intro">
+          <p className="section-number">02</p>
+          <div>
+            <p className="eyebrow">Teaching</p>
+            <h2 id="teaching-title">Teaching experience</h2>
           </div>
+          <p className="section-note">
+            Quantitative marketing at undergraduate, MSc, and doctoral levels.
+          </p>
+        </div>
+
+        <div className="teaching-list">
+          {teaching.map((item) => (
+            <article key={`${item.years}-${item.institution}`}>
+              <p className="years">{item.years}</p>
+              <div>
+                <h3>{item.institution}</h3>
+                {item.courses.map((course) => <p key={course}>{course}</p>)}
+                {item.award ? <p className="award">{item.award}</p> : null}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p className="section-number">03</p>
+          <p className="eyebrow">Contact</p>
+          <h2 id="contact-title">Yanting He</h2>
+        </div>
+        <div className="contact-details">
+          <p>
+            Assistant Professor of Marketing<br />
+            The Chinese University of Hong Kong, Shenzhen
+          </p>
+          <a href="mailto:heyanting@cuhk.edu.cn">heyanting@cuhk.edu.cn</a>
+          <a href="mailto:yanting.he.academic@gmail.com">yanting.he.academic@gmail.com</a>
+        </div>
+        <div className="contact-links">
+          <a href="/Yanting-He-CV.pdf">Curriculum vitae ↗</a>
+          <a
+            href="https://uk.linkedin.com/in/yanting-he-imperial"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn ↗
+          </a>
         </div>
       </section>
 
       <footer>
         <p>© 2026 Yanting He</p>
-        <p>Assistant Professor of Marketing · CUHK-Shenzhen</p>
         <a href="#top">Back to top ↑</a>
       </footer>
     </main>
