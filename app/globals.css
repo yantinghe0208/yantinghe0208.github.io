@@ -79,7 +79,6 @@ nav {
 nav a,
 .hero-links a,
 .text-link,
-.all-work-link,
 .contact a,
 footer a {
   text-underline-offset: 5px;
@@ -92,8 +91,6 @@ nav a:focus-visible,
 .hero-links a:focus-visible,
 .text-link:hover,
 .text-link:focus-visible,
-.all-work-link:hover,
-.all-work-link:focus-visible,
 .contact a:hover,
 .contact a:focus-visible,
 footer a:hover,
@@ -199,8 +196,7 @@ footer a:focus-visible {
 }
 
 .hero-links a,
-.text-link,
-.all-work-link {
+.text-link {
   border-bottom: 1px solid currentColor;
   color: var(--navy);
   font-size: 0.76rem;
@@ -308,12 +304,6 @@ footer a:focus-visible {
   width: fit-content;
   margin-top: 3px;
   justify-self: end;
-}
-
-.all-work-link {
-  width: fit-content;
-  margin: 30px 0 0 102px;
-  display: block;
 }
 
 .research-section {
@@ -453,13 +443,26 @@ footer a:focus-visible {
   border-top: 1px solid var(--line);
 }
 
-.personal-label {
+.personal-copy {
   grid-column: 2;
-  margin: 0 0 4px;
+  max-width: 430px;
+  align-self: end;
+}
+
+.personal-label {
+  margin: 0;
   color: #9a9a94;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 0.8rem;
   font-style: italic;
+}
+
+.personal-text {
+  margin: 14px 0 0;
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  line-height: 1.55;
 }
 
 .personal-note figure {
@@ -530,7 +533,6 @@ footer {
     margin-top: 0;
   }
 
-  .all-work-link,
   .teaching-list {
     margin-left: 76px;
   }
@@ -589,7 +591,6 @@ footer {
     margin-top: 45px;
   }
 
-  .all-work-link,
   .teaching-list {
     margin-left: 52px;
   }
@@ -623,7 +624,7 @@ footer {
     gap: 24px;
   }
 
-  .personal-label {
+  .personal-copy {
     grid-column: 1;
   }
 

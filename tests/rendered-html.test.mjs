@@ -22,6 +22,7 @@ test("builds the one-screen homepage and separate academic pages", async () => {
 
   assert.match(research, /<title>Research \| Yanting He<\/title>/i);
   assert.match(research, /Private Messaging in the Creator Economy/i);
+  assert.doesNotMatch(research, /View complete research record in my CV/i);
   assert.doesNotMatch(research, /https:\/\/yantinghe0208\.github\.io\/og\.png/i);
 
   assert.match(teaching, /<title>Teaching \| Yanting He<\/title>/i);
@@ -30,6 +31,7 @@ test("builds the one-screen homepage and separate academic pages", async () => {
 
   assert.match(contact, /<title>Contact \| Yanting He<\/title>/i);
   assert.match(contact, /Nuonuo, occasional research assistant/i);
+  assert.match(contact, /Outside research, I enjoy Zumba, live music/i);
   assert.match(contact, /heyanting@cuhk\.edu\.cn/i);
   assert.doesNotMatch(contact, /https:\/\/yantinghe0208\.github\.io\/og\.png/i);
 

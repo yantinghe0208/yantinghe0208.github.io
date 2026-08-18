@@ -96,9 +96,6 @@ export default function ResearchPage() {
           ))}
         </div>
 
-        <a className="all-work-link" href="/Yanting-He-CV.pdf">
-          View complete research record in my CV <span aria-hidden="true">↗</span>
-        </a>
       </section>
       <SiteFooter />
     </main>

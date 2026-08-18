@@ -57,8 +57,14 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <aside className="personal-note" aria-label="A personal note">
-        <p className="personal-label">Postscript</p>
+      <aside className="personal-note" aria-labelledby="elsewhere-title">
+        <div className="personal-copy">
+          <p className="personal-label">Elsewhere</p>
+          <p className="personal-text" id="elsewhere-title">
+            Outside research, I enjoy Zumba, live music, and time with Nuonuo,
+            my Westie.
+          </p>
+        </div>
         <figure>
           <img
             src="/nuonuo.jpg"
