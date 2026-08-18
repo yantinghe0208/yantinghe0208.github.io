@@ -1,7 +1,7 @@
 const research = [
   {
     number: "01",
-    status: "Publication · Marketing Science · 2025",
+    status: "Marketing Science, 44(3), 505–515 · 2025",
     title:
       "Frontiers: How Much Influencer Marketing Is Undisclosed? Evidence from Twitter.",
     authors: (
@@ -9,7 +9,7 @@ const research = [
         Daniel Ershov, <strong>Yanting He</strong>, and Stephan Seiler
       </>
     ),
-    note: "Authors listed alphabetically · Marketing Science, 44(3), 505–515.",
+    note: "Authors listed alphabetically",
     href: "https://doi.org/10.1287/mksc.2024.0838",
     linkLabel: "Publication",
   },
@@ -119,10 +119,10 @@ export default function Home() {
             <article className="paper" key={paper.number}>
               <p className="item-number">{paper.number}</p>
               <div className="paper-body">
-                <p className="paper-status">{paper.status}</p>
                 <h3>{paper.title}</h3>
                 <p className="authors">{paper.authors}</p>
                 {paper.note ? <p className="paper-note">{paper.note}</p> : null}
+                <p className="paper-status">{paper.status}</p>
               </div>
               <a
                 className="text-link"
