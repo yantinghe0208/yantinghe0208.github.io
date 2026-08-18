@@ -2,7 +2,7 @@
 
 :root {
   --paper: #f7f5f0;
-  --paper-deep: #efede7;
+  --research-surface: #fbfaf7;
   --ink: #1e292f;
   --navy: #263d4c;
   --muted: #667076;
@@ -95,8 +95,8 @@ footer a:focus-visible {
 }
 
 .hero {
-  min-height: 650px;
-  padding: 76px 0 90px;
+  min-height: 575px;
+  padding: 58px 0 66px;
   display: grid;
   grid-template-columns: minmax(260px, 0.68fr) minmax(0, 1.32fr);
   gap: clamp(54px, 8vw, 108px);
@@ -123,7 +123,6 @@ footer a:focus-visible {
 }
 
 .eyebrow,
-.paper-status,
 .years {
   color: var(--accent);
   font-size: 0.72rem;
@@ -140,7 +139,7 @@ footer a:focus-visible {
   margin: 0;
   color: var(--navy);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3.7rem, 6.8vw, 5.8rem);
+  font-size: clamp(3.7rem, 6.4vw, 5.3rem);
   font-weight: 400;
   line-height: 0.98;
   letter-spacing: -0.048em;
@@ -257,6 +256,9 @@ footer a:focus-visible {
 
 .paper-status {
   margin: 15px 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.6;
 }
 
 .paper h3,
@@ -301,13 +303,24 @@ footer a:focus-visible {
   display: block;
 }
 
+.research-section {
+  padding-top: 105px;
+  padding-bottom: 118px;
+  background: var(--research-surface);
+  box-shadow: 50vw 0 0 var(--research-surface), -50vw 0 0 var(--research-surface);
+}
+
 .teaching {
-  background: var(--paper-deep);
-  box-shadow: 50vw 0 0 var(--paper-deep), -50vw 0 0 var(--paper-deep);
+  padding-top: 82px;
+  padding-bottom: 92px;
+}
+
+.teaching .section-intro h2 {
+  font-size: clamp(2.35rem, 4.2vw, 3.55rem);
 }
 
 .teaching-list {
-  margin: 58px 0 0 102px;
+  margin: 46px 0 0 102px;
   border-top: 1px solid var(--line);
 }
 
@@ -466,10 +479,10 @@ footer {
   }
 
   nav {
-    gap: 18px;
+    gap: 15px;
   }
 
-  nav a:nth-child(-n + 2) {
+  nav a[href="#teaching"] {
     display: none;
   }
 

@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     siteName: "Yanting He",
     images: [
       {
-        url: "/profile.jpg",
-        width: 1800,
-        height: 1201,
-        alt: "Portrait of Yanting He",
+        url: "/og.png",
+        width: 1731,
+        height: 909,
+        alt: "Yanting He — Marketing, Digital Platforms, and Creator Economy",
       },
     ],
     type: "website",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Yanting He | Assistant Professor of Marketing",
     description:
       "Research on the creator economy, digital platforms, and quantitative marketing.",
-    images: ["/profile.jpg"],
+    images: ["/og.png"],
   },
 };
 

@@ -101,7 +101,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" id="research" aria-labelledby="research-title">
+      <section className="section research-section" id="research" aria-labelledby="research-title">
         <div className="section-intro">
           <p className="section-number">01</p>
           <div>
