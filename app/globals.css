@@ -553,7 +553,7 @@ footer {
     gap: 15px;
   }
 
-  nav a[href="/teaching"] {
+  nav a[href="/teaching/"] {
     display: none;
   }
 

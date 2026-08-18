@@ -7,16 +7,16 @@ const outputRoot = new URL("../dist/client/", import.meta.url);
 test("builds the one-screen homepage and separate academic pages", async () => {
   const [home, research, teaching, contact] = await Promise.all([
     readFile(new URL("index.html", outputRoot), "utf8"),
-    readFile(new URL("research.html", outputRoot), "utf8"),
-    readFile(new URL("teaching.html", outputRoot), "utf8"),
-    readFile(new URL("contact.html", outputRoot), "utf8"),
+    readFile(new URL("research/index.html", outputRoot), "utf8"),
+    readFile(new URL("teaching/index.html", outputRoot), "utf8"),
+    readFile(new URL("contact/index.html", outputRoot), "utf8"),
   ]);
 
   assert.match(home, /<title>Yanting He \| Assistant Professor of Marketing<\/title>/i);
   assert.match(home, /The Chinese University of Hong Kong, Shenzhen/i);
   assert.match(home, /Portrait of Yanting He/i);
   assert.match(home, /https:\/\/yantinghe0208\.github\.io\/og\.png/i);
-  assert.match(home, /href="\/research"/i);
+  assert.match(home, /href="\/research\/"/i);
   assert.match(home, /href="\/Yanting-He-CV\.pdf"/i);
   assert.doesNotMatch(home, /Private Messaging in the Creator Economy/i);
 

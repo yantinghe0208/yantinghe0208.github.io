@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: pageTitle,
     description: pageDescription,
-    url: "/contact",
+    url: "/contact/",
     siteName: "Yanting He",
     type: "website",
     images: [],

@@ -5,10 +5,10 @@ export function SiteHeader() {
         Yanting He
       </a>
       <nav aria-label="Primary navigation">
-        <a href="/research">Research</a>
-        <a href="/teaching">Teaching</a>
+        <a href="/research/">Research</a>
+        <a href="/teaching/">Teaching</a>
         <a href="/Yanting-He-CV.pdf">CV</a>
-        <a href="/contact">Contact</a>
+        <a href="/contact/">Contact</a>
       </nav>
     </header>
   );

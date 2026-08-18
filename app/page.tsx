@@ -33,9 +33,9 @@ export default function Home() {
             Creator Economy · Digital Platforms · Quantitative Marketing
           </p>
           <div className="hero-links" aria-label="Profile links">
-            <a href="/research">Research <span aria-hidden="true">→</span></a>
+            <a href="/research/">Research <span aria-hidden="true">→</span></a>
             <a href="/Yanting-He-CV.pdf">Curriculum vitae <span aria-hidden="true">↗</span></a>
-            <a href="/contact">Contact <span aria-hidden="true">→</span></a>
+            <a href="/contact/">Contact <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </section>
