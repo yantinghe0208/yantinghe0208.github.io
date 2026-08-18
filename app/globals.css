@@ -36,6 +36,12 @@ img {
   max-width: 100%;
 }
 
+.page-shell {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
 .site-header,
 .hero,
 .section,
@@ -102,6 +108,12 @@ footer a:focus-visible {
   grid-template-columns: minmax(260px, 0.68fr) minmax(0, 1.32fr);
   gap: clamp(54px, 8vw, 108px);
   align-items: center;
+}
+
+.hero-home {
+  min-height: calc(100svh - 78px);
+  padding-top: 38px;
+  padding-bottom: 46px;
 }
 
 .portrait-wrap {
@@ -219,8 +231,8 @@ footer a:focus-visible {
   margin-bottom: 10px;
 }
 
-.section h2,
-.contact h2 {
+.section-intro h1,
+.contact h1 {
   margin: 0;
   color: var(--navy);
   font-family: Georgia, "Times New Roman", serif;
@@ -262,14 +274,14 @@ footer a:focus-visible {
   line-height: 1.6;
 }
 
-.paper h3,
-.teaching-list h3 {
+.paper h2,
+.teaching-list h2 {
   color: var(--navy);
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
 }
 
-.paper h3 {
+.paper h2 {
   max-width: 760px;
   margin: 0;
   font-size: clamp(1.45rem, 2.4vw, 2rem);
@@ -311,12 +323,18 @@ footer a:focus-visible {
   box-shadow: 50vw 0 0 var(--research-surface), -50vw 0 0 var(--research-surface);
 }
 
+.route-section {
+  flex: 1;
+  min-height: calc(100svh - 154px);
+  border-top: 0;
+}
+
 .teaching {
   padding-top: 82px;
   padding-bottom: 92px;
 }
 
-.teaching .section-intro h2 {
+.teaching .section-intro h1 {
   font-size: clamp(2.35rem, 4.2vw, 3.55rem);
 }
 
@@ -337,7 +355,7 @@ footer a:focus-visible {
   margin: 4px 0 0;
 }
 
-.teaching-list h3 {
+.teaching-list h2 {
   margin: 0 0 14px;
   font-size: 1.4rem;
 }
@@ -379,7 +397,7 @@ footer a:focus-visible {
   margin-bottom: 12px;
 }
 
-.contact > div:first-child h2 {
+.contact > div:first-child h1 {
   grid-column: 2;
   grid-row: 1;
   margin-top: 27px;
@@ -418,6 +436,11 @@ footer a:focus-visible {
   color: var(--navy);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.05rem;
+}
+
+.contact-page {
+  flex: 1;
+  border-top: 0;
 }
 
 .personal-note {
@@ -530,7 +553,7 @@ footer {
     gap: 15px;
   }
 
-  nav a[href="#teaching"] {
+  nav a[href="/teaching"] {
     display: none;
   }
 
@@ -538,6 +561,10 @@ footer {
     padding: 46px 0 70px;
     grid-template-columns: 1fr;
     gap: 35px;
+  }
+
+  .hero-home {
+    min-height: calc(100svh - 70px);
   }
 
   .portrait-wrap {
