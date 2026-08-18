@@ -193,6 +193,19 @@ export default function Home() {
         </div>
       </section>
 
+      <aside className="personal-note" aria-label="A personal note">
+        <p className="personal-label">Postscript</p>
+        <figure>
+          <img
+            src="/nuonuo.jpg"
+            alt="Nuonuo, Yanting He's Westie"
+            width="814"
+            height="1086"
+          />
+          <figcaption>Nuonuo, occasional research assistant.</figcaption>
+        </figure>
+      </aside>
+
       <footer>
         <p>© 2026 Yanting He</p>
         <a href="#top">Back to top ↑</a>

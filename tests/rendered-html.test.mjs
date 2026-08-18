@@ -11,6 +11,7 @@ test("builds the complete academic homepage", async () => {
   assert.match(html, /Private Messaging in the Creator Economy/i);
   assert.match(html, /The Chinese University of Hong Kong, Shenzhen/i);
   assert.match(html, /Teaching Excellence Award Recipient/i);
+  assert.match(html, /Nuonuo, occasional research assistant/i);
   assert.match(html, /heyanting@cuhk\.edu\.cn/i);
   assert.match(html, /Portrait of Yanting He/i);
   assert.match(html, /https:\/\/yantinghe0208\.github\.io\/og\.png/i);
@@ -23,6 +24,7 @@ test("ships the public CV and profile photo", async () => {
     access(new URL("Yanting-He-CV.pdf", outputRoot)),
     access(new URL("profile.jpg", outputRoot)),
     access(new URL("og.png", outputRoot)),
+    access(new URL("nuonuo.jpg", outputRoot)),
     access(new URL(".nojekyll", outputRoot)),
   ]);
 });

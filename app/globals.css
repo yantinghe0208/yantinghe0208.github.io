@@ -40,6 +40,7 @@ img {
 .hero,
 .section,
 .contact,
+.personal-note,
 footer {
   width: min(1080px, calc(100% - 64px));
   margin-inline: auto;
@@ -419,6 +420,48 @@ footer a:focus-visible {
   font-size: 1.05rem;
 }
 
+.personal-note {
+  min-height: 285px;
+  padding: 56px 0 64px;
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) 165px;
+  gap: 30px;
+  align-items: end;
+  border-top: 1px solid var(--line);
+}
+
+.personal-label {
+  grid-column: 2;
+  margin: 0 0 4px;
+  color: #9a9a94;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.personal-note figure {
+  grid-column: 3;
+  margin: 0;
+}
+
+.personal-note img {
+  width: 148px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 53%;
+  filter: saturate(0.66) sepia(0.08) contrast(0.95);
+}
+
+.personal-note figcaption {
+  max-width: 155px;
+  margin-top: 12px;
+  color: var(--muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.78rem;
+  font-style: italic;
+  line-height: 1.45;
+}
+
 footer {
   min-height: 76px;
   display: flex;
@@ -434,6 +477,7 @@ footer {
   .hero,
   .section,
   .contact,
+  .personal-note,
   footer {
     width: min(100% - 40px, 1080px);
   }
@@ -470,6 +514,10 @@ footer {
 
   .contact {
     grid-template-columns: 46px minmax(0, 1fr) minmax(180px, 0.6fr);
+  }
+
+  .personal-note {
+    grid-template-columns: 46px minmax(0, 1fr) 165px;
   }
 }
 
@@ -539,6 +587,25 @@ footer {
     grid-column: 2;
     grid-row: auto;
     margin-top: 18px;
+  }
+
+  .personal-note {
+    min-height: 250px;
+    padding: 46px 0 54px;
+    grid-template-columns: minmax(0, 1fr) 145px;
+    gap: 24px;
+  }
+
+  .personal-label {
+    grid-column: 1;
+  }
+
+  .personal-note figure {
+    grid-column: 2;
+  }
+
+  .personal-note img {
+    width: 138px;
   }
 
   footer {
