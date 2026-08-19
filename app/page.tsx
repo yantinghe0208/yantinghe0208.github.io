@@ -22,22 +22,32 @@ export default function Home() {
             School of Management and Economics<br />
             The Chinese University of Hong Kong, Shenzhen
           </p>
-          <p className="education-line">
-            PhD in Quantitative Marketing and MRes in Business, Imperial
-            College London · MSc in Advanced Computer Science, University of
-            Manchester
-          </p>
+          <div className="education-background">
+            <span>Academic background</span>
+            <ul>
+              <li>
+                <strong>Imperial College London</strong> · PhD in Quantitative
+                Marketing and MRes in Business
+              </li>
+              <li>
+                <strong>University of Manchester</strong> · MSc in Advanced
+                Computer Science
+              </li>
+            </ul>
+          </div>
           <p className="intro research-focus">
             <span>Research</span>
-            My research examines how digital creators, influencers, and
-            user-generated content shape consumer behavior, firm performance,
-            and society. I study these questions through the design and
-            governance of digital platforms.
+            My research examines the evolving dynamics of the creator economy.
+            I combine causal inference with AI-based methods to study how
+            creators, consumers, and brands interact, and how these
+            interactions shape markets and society. My goal is to
+            generate insights that support a more transparent, equitable, and
+            effective digital ecosystem.
           </p>
           <div className="interests">
             <span>Research interests</span>
             <ul>
-              <li><strong>Substantive:</strong> Creator Economy · Digital Platforms</li>
+              <li><strong>Topics:</strong> Creator Economy · Digital Platforms</li>
               <li><strong>Methodological:</strong> Causal Inference · Machine Learning</li>
             </ul>
           </div>
