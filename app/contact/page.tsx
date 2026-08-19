@@ -35,25 +35,35 @@ export default function ContactPage() {
         <div>
           <p className="section-number">03</p>
           <p className="eyebrow">Contact</p>
-          <h1 id="contact-title">Yanting He</h1>
+          <h1 id="contact-title">Get in touch</h1>
         </div>
         <div className="contact-details">
-          <p>
+          <p className="contact-role">
             Assistant Professor of Marketing<br />
             The Chinese University of Hong Kong, Shenzhen
           </p>
-          <a href="mailto:heyanting@cuhk.edu.cn">heyanting@cuhk.edu.cn</a>
-          <a href="mailto:yanting.he.academic@gmail.com">yanting.he.academic@gmail.com</a>
-        </div>
-        <div className="contact-links">
-          <a href="/Yanting-He-CV.pdf">Curriculum vitae ↗</a>
-          <a
-            href="https://uk.linkedin.com/in/yanting-he-imperial"
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn ↗
-          </a>
+          <div className="contact-email-list">
+            <p className="contact-email">
+              <span>Institutional</span>
+              <a href="mailto:heyanting@cuhk.edu.cn">heyanting@cuhk.edu.cn</a>
+            </p>
+            <p className="contact-email">
+              <span>Academic</span>
+              <a href="mailto:yanting.he.academic@gmail.com">
+                yanting.he.academic@gmail.com
+              </a>
+            </p>
+          </div>
+          <div className="contact-links">
+            <a href="/Yanting-He-CV.pdf">Curriculum vitae ↗</a>
+            <a
+              href="https://uk.linkedin.com/in/yanting-he-imperial"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn ↗
+            </a>
+          </div>
         </div>
       </section>
 
