@@ -149,10 +149,17 @@ footer a:focus-visible {
   margin: 0;
   color: var(--navy);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3.7rem, 6.4vw, 5.3rem);
+  font-size: clamp(3.3rem, 5.4vw, 4.55rem);
   font-weight: 400;
   line-height: 0.98;
   letter-spacing: -0.048em;
+}
+
+.education-line {
+  margin: 15px 0 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.55;
 }
 
 .affiliation {
@@ -171,21 +178,55 @@ footer a:focus-visible {
   line-height: 1.78;
 }
 
+.research-focus span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
 .interests {
-  margin: 23px 0 0;
+  margin: 20px 0 0;
   color: var(--navy);
   font-size: 0.82rem;
   line-height: 1.7;
 }
 
-.interests span {
+.interests > span {
   display: block;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   color: var(--muted);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.interests ul {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1px;
+  list-style: none;
+}
+
+.interests li {
+  position: relative;
+  padding-left: 13px;
+}
+
+.interests li::before {
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  content: "•";
+}
+
+.interests strong {
+  font-weight: 700;
 }
 
 .hero-links {
@@ -574,7 +615,7 @@ footer {
   }
 
   .hero h1 {
-    font-size: clamp(3.55rem, 19vw, 5rem);
+    font-size: clamp(3.15rem, 16vw, 4.2rem);
   }
 
   .section {
