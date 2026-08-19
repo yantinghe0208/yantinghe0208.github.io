@@ -69,10 +69,9 @@ export default function ResearchPage() {
             <h1 id="research-title">Selected research</h1>
           </div>
           <p className="section-note">
-            My research examines the evolving dynamics of the creator economy—how
-            creators, consumers, brands, and platforms interact and shape digital
-            markets. I combine causal inference with AI-based methods to study
-            these questions.
+            I study the creator economy—how creators, consumers, brands, and
+            platforms shape digital markets—using causal inference and AI-based
+            methods.
           </p>
         </div>
 
