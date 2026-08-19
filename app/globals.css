@@ -323,6 +323,14 @@ footer a:focus-visible {
   box-shadow: 50vw 0 0 var(--research-surface), -50vw 0 0 var(--research-surface);
 }
 
+.research-section .section-intro > .section-number {
+  color: var(--accent);
+}
+
+.research-section .section-note {
+  align-self: center;
+}
+
 .route-section {
   flex: 1;
   min-height: calc(100svh - 154px);
