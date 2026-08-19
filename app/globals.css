@@ -5,9 +5,11 @@
   --research-surface: #fbfaf7;
   --ink: #1e292f;
   --navy: #263d4c;
-  --muted: #667076;
+  --muted: #59646a;
   --line: #d4d2cb;
   --accent: #8a4c3b;
+  --display-serif: "Iowan Old Style", "Palatino Linotype", Palatino,
+    "Book Antiqua", Georgia, serif;
 }
 
 * {
@@ -36,6 +38,12 @@ img {
   max-width: 100%;
 }
 
+.home-shell {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
 .page-shell {
   min-height: 100svh;
   display: flex;
@@ -62,7 +70,7 @@ footer {
 
 .wordmark {
   color: var(--navy);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--display-serif);
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -108,7 +116,8 @@ footer a:focus-visible {
 }
 
 .hero-home {
-  min-height: calc(100svh - 78px);
+  min-height: 0;
+  flex: 1;
   padding-top: 38px;
   padding-bottom: 46px;
 }
@@ -145,61 +154,28 @@ footer a:focus-visible {
   margin: 0 0 18px;
 }
 
+.eyebrow::after {
+  width: 28px;
+  margin-top: 8px;
+  display: block;
+  border-top: 1px solid color-mix(in srgb, var(--accent) 72%, transparent);
+  content: "";
+}
+
 .hero h1 {
   margin: 0;
   color: var(--navy);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--display-serif);
   font-size: clamp(2.95rem, 4.6vw, 3.8rem);
   font-weight: 400;
   line-height: 0.98;
   letter-spacing: -0.048em;
 }
 
-.education-background {
-  margin: 16px 0 0;
-  color: var(--muted);
-  font-size: 0.76rem;
-  line-height: 1.55;
-}
-
-.education-background > span {
-  display: block;
-  margin-bottom: 4px;
-  font-size: 0.66rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.education-background ul {
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 2px;
-  list-style: none;
-}
-
-.education-background li {
-  position: relative;
-  padding-left: 13px;
-}
-
-.education-background li::before {
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  content: "•";
-}
-
-.education-background strong {
-  color: var(--navy);
-  font-weight: 700;
-}
-
 .affiliation {
   margin: 22px 0 0;
   color: var(--navy);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--display-serif);
   font-size: clamp(1.05rem, 1.7vw, 1.28rem);
   line-height: 1.5;
 }
@@ -220,47 +196,6 @@ footer a:focus-visible {
   font-weight: 750;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-}
-
-.interests {
-  margin: 20px 0 0;
-  color: var(--navy);
-  font-size: 0.82rem;
-  line-height: 1.7;
-}
-
-.interests > span {
-  display: block;
-  margin-bottom: 4px;
-  color: var(--muted);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.interests ul {
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 1px;
-  list-style: none;
-}
-
-.interests li {
-  position: relative;
-  padding-left: 13px;
-}
-
-.interests li::before {
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  content: "•";
-}
-
-.interests strong {
-  font-weight: 700;
 }
 
 .hero-links {
@@ -294,7 +229,7 @@ footer a:focus-visible {
 .item-number {
   margin: 0;
   color: #9a9a94;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--display-serif);
   font-size: 0.92rem;
 }
 
@@ -306,7 +241,7 @@ footer a:focus-visible {
 .contact h1 {
   margin: 0;
   color: var(--navy);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--display-serif);
   font-size: clamp(2.5rem, 5vw, 4.25rem);
   font-weight: 400;
   line-height: 1.03;
@@ -348,7 +283,7 @@ footer a:focus-visible {
 .paper h2,
 .teaching-list h2 {
   color: var(--navy);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--display-serif);
   font-weight: 400;
 }
 
@@ -499,7 +434,7 @@ footer a:focus-visible {
   justify-content: end;
   gap: 14px;
   color: var(--navy);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--display-serif);
   font-size: 1.05rem;
 }
 
@@ -527,7 +462,7 @@ footer a:focus-visible {
 .personal-label {
   margin: 0;
   color: #9a9a94;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--display-serif);
   font-size: 0.8rem;
   font-style: italic;
 }
@@ -535,7 +470,7 @@ footer a:focus-visible {
 .personal-text {
   margin: 14px 0 0;
   color: var(--navy);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--display-serif);
   font-size: clamp(1.05rem, 1.7vw, 1.25rem);
   line-height: 1.55;
 }
@@ -557,7 +492,7 @@ footer a:focus-visible {
   max-width: 155px;
   margin-top: 12px;
   color: var(--muted);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--display-serif);
   font-size: 0.78rem;
   font-style: italic;
   line-height: 1.45;
@@ -641,7 +576,8 @@ footer {
   }
 
   .hero-home {
-    min-height: calc(100svh - 70px);
+    min-height: auto;
+    flex: none;
   }
 
   .portrait-wrap {
