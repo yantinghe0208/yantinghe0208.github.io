@@ -72,7 +72,15 @@ export default function TeachingPage() {
               <p className="years">{item.years}</p>
               <div>
                 <h2>{item.institution}</h2>
-                {item.courses.map((course) => <p key={course}>{course}</p>)}
+                {item.courses.map((course) => {
+                  const [name, role] = course.split(" · ");
+                  return (
+                    <p key={course}>
+                      <strong>{name}</strong>
+                      {role ? <> · {role}</> : null}
+                    </p>
+                  );
+                })}
                 {item.award ? <p className="award">{item.award}</p> : null}
               </div>
             </article>
