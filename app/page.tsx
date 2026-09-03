@@ -10,8 +10,8 @@ export default function Home() {
           <img
             src="/profile.jpg"
             alt="Portrait of Yanting He"
-            width="1800"
-            height="1201"
+            width="1254"
+            height="1254"
           />
         </figure>
 
