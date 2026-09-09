@@ -16,6 +16,8 @@ test("builds the one-screen homepage and separate academic pages", async () => {
   assert.match(home, /The Chinese University of Hong Kong, Shenzhen/i);
   assert.match(home, /Portrait of Yanting He/i);
   assert.match(home, /https:\/\/yantinghe0208\.github\.io\/og\.png/i);
+  assert.match(home, /googletagmanager\.com\/gtag\/js\?id=G-LVG41FT10J/i);
+  assert.match(home, /gtag\('config', 'G-LVG41FT10J'\)/i);
   assert.match(home, /href="\/research\/"/i);
   assert.match(home, /href="\/Yanting-He-CV\.pdf"/i);
   assert.doesNotMatch(home, /Private Messaging in the Creator Economy/i);
@@ -36,6 +38,7 @@ test("builds the one-screen homepage and separate academic pages", async () => {
   assert.doesNotMatch(contact, /https:\/\/yantinghe0208\.github\.io\/og\.png/i);
 
   for (const html of [home, research, teaching, contact]) {
+    assert.match(html, /googletagmanager\.com\/gtag\/js\?id=G-LVG41FT10J/i);
     assert.doesNotMatch(html, /Starter Project|codex-preview|SkeletonPreview/i);
   }
 });

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
 import "./globals.css";
 
+const GA_MEASUREMENT_ID = "G-LVG41FT10J";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://yantinghe0208.github.io"),
   title: "Yanting He | Assistant Professor of Marketing",
@@ -39,6 +41,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}');
+            `,
+          }}
+        />
+      </head>
       <body>
         {children}
         <GoogleAnalytics />

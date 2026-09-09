@@ -2,8 +2,6 @@
 
 import { useEffect } from "react";
 
-const GA_MEASUREMENT_ID = "G-LVG41FT10J";
-
 declare global {
   interface Window {
     dataLayer?: unknown[];
@@ -44,23 +42,6 @@ function emailType(link: HTMLAnchorElement) {
 
 export function GoogleAnalytics() {
   useEffect(() => {
-    if (!/^G-[A-Z0-9]+$/i.test(GA_MEASUREMENT_ID)) return;
-
-    window.dataLayer = window.dataLayer ?? [];
-    window.gtag =
-      window.gtag ??
-      ((...args: unknown[]) => {
-        window.dataLayer?.push(args);
-      });
-
-    window.gtag("js", new Date());
-    window.gtag("config", GA_MEASUREMENT_ID);
-
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-    document.head.appendChild(script);
-
     const trackClick = (event: MouseEvent) => {
       const element = event.target instanceof Element ? event.target : null;
       const link = element?.closest<HTMLAnchorElement>("a[href]");
