@@ -32,8 +32,8 @@ test("builds the one-screen homepage and separate academic pages", async () => {
   assert.doesNotMatch(teaching, /https:\/\/yantinghe0208\.github\.io\/og\.png/i);
 
   assert.match(contact, /<title>Contact \| Yanting He<\/title>/i);
-  assert.match(contact, /Nuonuo, occasional research assistant/i);
-  assert.match(contact, /Outside research, I enjoy Zumba, live music/i);
+  assert.match(contact, /Outside research, I enjoy Zumba, concerts, and live music/i);
+  assert.doesNotMatch(contact, /Nuonuo|Westie/i);
   assert.match(contact, /heyanting@cuhk\.edu\.cn/i);
   assert.doesNotMatch(contact, /https:\/\/yantinghe0208\.github\.io\/og\.png/i);
 
@@ -48,7 +48,6 @@ test("ships the public CV and profile photo", async () => {
     access(new URL("Yanting-He-CV.pdf", outputRoot)),
     access(new URL("profile.jpg", outputRoot)),
     access(new URL("og.png", outputRoot)),
-    access(new URL("nuonuo.jpg", outputRoot)),
     access(new URL(".nojekyll", outputRoot)),
   ]);
 });

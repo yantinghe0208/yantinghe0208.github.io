@@ -71,19 +71,9 @@ export default function ContactPage() {
         <div className="personal-copy">
           <p className="personal-label">Elsewhere</p>
           <p className="personal-text" id="elsewhere-title">
-            Outside research, I enjoy Zumba, live music, and time with Nuonuo,
-            my Westie.
+            Outside research, I enjoy Zumba, concerts, and live music.
           </p>
         </div>
-        <figure>
-          <img
-            src="/nuonuo.jpg"
-            alt="Nuonuo, Yanting He's Westie"
-            width="814"
-            height="1086"
-          />
-          <figcaption>Nuonuo, occasional research assistant.</figcaption>
-        </figure>
       </aside>
       <SiteFooter />
     </main>
